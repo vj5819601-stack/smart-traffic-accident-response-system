@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Traffic Monitoring</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header class="topbar"><div class="brand"><div class="brand-icon">🚦</div><div><h1>Smart Traffic</h1><span>Accident Response Management</span></div></div><nav><a href="/">Dashboard</a><a href="/accident.html">Report Accident</a><a class="active" href="/traffic.html">Traffic</a></nav></header>
+<main class="container">
+<section class="hero compact"><div><p class="eyebrow">ROAD MONITORING</p><h2>Traffic Status Management</h2><p>Monitor road conditions and register traffic updates.</p></div></section>
+<section class="content-grid">
+<div class="panel large"><div class="panel-head"><div><h3>Current Traffic Status</h3><p>Road conditions stored in the database.</p></div><button class="ghost-btn" onclick="loadTraffic()">Refresh</button></div>
+<div class="table-wrap"><table><thead><tr><th>Road</th><th>Area</th><th>Level</th><th>Reason</th><th>Updated</th></tr></thead><tbody id="trafficTable"></tbody></table></div></div>
+<div class="panel"><h3>Add Traffic Update</h3><p class="muted">Use this form for a new road condition.</p><form id="trafficForm" class="stack-form">
+<label>Road Name<input name="road_name" required placeholder="e.g. M.G. Road"></label>
+<label>Area<input name="area" required placeholder="e.g. Shivajinagar"></label>
+<label>Traffic Level<select name="traffic_level" required><option>Low</option><option>Moderate</option><option>Heavy</option><option>Critical</option></select></label>
+<label>Reason<input name="reason" placeholder="e.g. Peak hour"></label>
+<button class="primary-btn" type="submit">Add Update</button><div id="trafficMessage" class="message"></div>
+</form></div>
+</section></main><footer>Traffic monitoring module • Smart Traffic Project</footer><script src="/script.js"></script>
+</body></html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Traffic Response</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="brand-icon">🚦</div><div><h1>Smart Traffic</h1><span>Accident Response Management</span></div></div>
+  <nav><a class="active" href="/">Dashboard</a><a href="/accident.html">Report Accident</a><a href="/traffic.html">Traffic</a></nav>
+</header>
+<main class="container">
+<section class="hero">
+  <div><p class="eyebrow">SMART CITY • EMERGENCY RESPONSE</p><h2>Traffic & Accident Control Center</h2><p>Monitor traffic incidents, coordinate emergency response and track road conditions from one dashboard.</p></div>
+  <a class="primary-btn" href="/accident.html">+ Report Accident</a>
+</section>
+<section class="stats-grid">
+  <div class="stat-card"><span>Total Accidents</span><strong id="totalAccidents">-</strong><small>Reported incidents</small></div>
+  <div class="stat-card"><span>Active Incidents</span><strong id="activeIncidents">-</strong><small>Needs response</small></div>
+  <div class="stat-card"><span>Resolved</span><strong id="resolvedIncidents">-</strong><small>Successfully closed</small></div>
+  <div class="stat-card"><span>Available Ambulances</span><strong id="availableAmbulances">-</strong><small>Ready for dispatch</small></div>
+</section>
+<section class="content-grid">
+  <div class="panel large">
+    <div class="panel-head"><div><h3>Recent Accident Reports</h3><p>Latest incidents received by the control center.</p></div><button class="ghost-btn" onclick="loadDashboard()">Refresh</button></div>
+    <div class="table-wrap"><table><thead><tr><th>ID</th><th>Location</th><th>Type</th><th>Severity</th><th>Status</th><th>Time</th></tr></thead><tbody id="accidentTable"></tbody></table></div>
+  </div>
+  <div class="panel">
+    <div class="panel-head"><div><h3>System Status</h3><p>Live service checks.</p></div></div>
+    <div class="status-list">
+      <div><span>Web Application</span><b class="online">● Online</b></div>
+      <div><span>Database</span><b id="dbStatus">Checking...</b></div>
+      <div><span>Emergency Service</span><b class="online">● Ready</b></div>
+      <div><span>Traffic Monitoring</span><b class="online">● Active</b></div>
+    </div>
+  </div>
+</section>
+<section class="panel">
+  <div class="panel-head"><div><h3>Emergency Response Flow</h3><p>How an accident moves through the system.</p></div></div>
+  <div class="flow">
+    <div><span>1</span><b>Reported</b><small>Citizen reports incident</small></div><i>→</i>
+    <div><span>2</span><b>Verified</b><small>Control center reviews</small></div><i>→</i>
+    <div><span>3</span><b>Dispatch</b><small>Ambulance & police</small></div><i>→</i>
+    <div><span>4</span><b>Hospital</b><small>Emergency notification</small></div><i>→</i>
+    <div><span>5</span><b>Resolved</b><small>Incident closed</small></div>
+  </div>
+</section>
+</main>
+<footer>Smart Traffic & Accident Response Management System • DevOps Mini Project</footer>
+<script src="/script.js"></script>
+</body>
+</html>

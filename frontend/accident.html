@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Report Accident</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header class="topbar"><div class="brand"><div class="brand-icon">🚦</div><div><h1>Smart Traffic</h1><span>Accident Response Management</span></div></div><nav><a href="/">Dashboard</a><a class="active" href="/accident.html">Report Accident</a><a href="/traffic.html">Traffic</a></nav></header>
+<main class="container narrow">
+<section class="hero compact"><div><p class="eyebrow">EMERGENCY REPORTING</p><h2>Report a Traffic Accident</h2><p>Enter accurate information so the control center can coordinate a response.</p></div></section>
+<section class="panel"><form id="accidentForm"><div class="form-grid">
+<label>Reporter Name<input name="reporter_name" required placeholder="Enter your name"></label>
+<label>Contact Number<input name="contact" required placeholder="10-digit number"></label>
+<label>Location<input name="location" required placeholder="Road / area / landmark"></label>
+<label>Accident Type<select name="accident_type" required><option value="">Select type</option><option>Vehicle Collision</option><option>Two-Wheeler Accident</option><option>Pedestrian Accident</option><option>Road Obstruction</option><option>Other</option></select></label>
+<label>Severity<select name="severity" required><option value="">Select severity</option><option>Low</option><option>Medium</option><option>High</option><option>Critical</option></select></label>
+<label class="full">Description<textarea name="description" rows="5" placeholder="Describe what happened..."></textarea></label>
+</div><div class="form-actions"><a class="ghost-btn" href="/">Cancel</a><button class="primary-btn" type="submit">Submit Emergency Report</button></div><div id="formMessage" class="message"></div></form></section>
+</main><footer>Emergency reporting module • Smart Traffic Project</footer><script src="/script.js"></script>
+</body></html>
