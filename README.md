@@ -44,11 +44,3 @@ Stop:
 GitHub Actions is already included in `.github/workflows/ci.yml`.
 It installs dependencies, runs tests, and builds the Docker image.
 
-## Viva demo
-1. Show dashboard.
-2. Report an accident.
-3. Show the new record.
-4. Add a traffic update.
-5. Commit and push to GitHub.
-6. Show GitHub Actions success.
-7. Run the project using Docker.
